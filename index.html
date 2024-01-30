@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    for (let i = 20; i <= 30; i += 0.5) {
+            console.log(i);
+        }
+    const exchangeRate = 27;
+
+    for (let dollars = 10; dollars <= 100; dollars += 10) {
+        const costInHryvnia = dollars * exchangeRate;
+        console.log(`${dollars} доларів коштують ${costInHryvnia} гривень`);
+    }
+    function printSquaresUpToN(N) {
+        for (let i = 1; i <= 100; i++) {
+            const square = i * i;
+            if (square <= N) {
+                console.log(square);
+            } else {
+                break; 
+            }
+        }
+    }
+    printSquaresUpToN(1000);
+    function isPrime(number) {
+        if (number <= 1) {
+            return false; 
+        }
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false; 
+            }
+        }
+
+        return true; 
+    }
+    const inputNumber = 13; 
+    if (isPrime(inputNumber)) {
+        console.log(`${inputNumber} є простим числом.`);
+    } else {
+        console.log(`${inputNumber} не є простим числом.`);
+    }
+    function isPowerOfThree(num) {
+        if (num <= 0) {
+            return false; 
+        }
+
+        while (num % 3 === 0) {
+            num /= 3;
+        }
+
+        return num === 1;
+    }
+    const numberToCheck = 81;
+    if (isPowerOfThree(numberToCheck)) {
+        console.log(`${numberToCheck} можна отримати, піднімаючи число 3 до певної ступені.`);
+    } else {
+        console.log(`${numberToCheck} не можна отримати, піднімаючи число 3 до певної ступені.`);
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>
